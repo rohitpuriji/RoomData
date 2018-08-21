@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".ListActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Emp and dept"
+        android:id="@+id/btnAdd"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="print All Employees"
+        android:id="@+id/btnPrintAllEmp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="print All Departments"
+        android:id="@+id/btnPrintAllDept"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="print All Employees name start with A"
+        android:id="@+id/btnPrintNameWith"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="print All Employees with salary more than 10000"
+        android:id="@+id/btnPrintAllEmpSalary"
+        />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="print Employee with 2nd highest salary"
+        android:id="@+id/btnPrint2High"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="print All Employees with string hi"
+        android:id="@+id/btnPrintAllEmpHi"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detail of employee whose having highest salary and belongs to sales department"
+        android:id="@+id/btnPrintEmpDetails"
+        />
+
+</LinearLayout>
