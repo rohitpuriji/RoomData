@@ -30,8 +30,8 @@ public interface EmployeeDao {
     List<EmployeeModel> getEmployeeWith2Salary();
 
 
-    @Query("SELECT * FROM employee INNER JOIN department WHERE salary = (select max(salary)) AND department LIKE 'sales'")
-    List<EmployeeModel> getEmployeeWith2SalarywithSales();
+    @Query("SELECT * FROM Employee WHERE deptId = :deptId order by salary desc limit 1")
+    List<EmployeeModel> getEmpDepartWithSales(String deptId);
 
 
 }

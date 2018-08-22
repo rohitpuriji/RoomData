@@ -2,13 +2,14 @@ package com.customer.roomsample;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.ForeignKey;
 import android.arch.persistence.room.PrimaryKey;
 
 @Entity(tableName = "Employee")
 public class EmployeeModel {
 
     @PrimaryKey(autoGenerate = true)
-    public int mId;
+    public int id;
 
     @ColumnInfo(name = "name")
     public String mName;
@@ -16,15 +17,24 @@ public class EmployeeModel {
     @ColumnInfo (name = "salary")
     public String mSalary;
 
-    @ColumnInfo (name = "deptid")
-    public String mDeptId;
 
-    public int getmId() {
-        return mId;
+    @ForeignKey(entity = DeptModel.class, parentColumns = "id", childColumns = "deptId")
+    public String deptId;
+
+    public String getmDeptId() {
+        return deptId;
     }
 
-    public void setmId(int mId) {
-        this.mId = mId;
+    public void setmDeptId(String deptId) {
+        this.deptId = deptId;
+    }
+
+    public int getmId() {
+        return id;
+    }
+
+    public void setmId(int id) {
+        this.id = id;
     }
 
     public String getmName() {
@@ -43,11 +53,4 @@ public class EmployeeModel {
         this.mSalary = mSalary;
     }
 
-    public String getmDeptId() {
-        return mDeptId;
-    }
-
-    public void setmDeptId(String mDeptId) {
-        this.mDeptId = mDeptId;
-    }
 }

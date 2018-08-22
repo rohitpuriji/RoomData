@@ -8,17 +8,17 @@ import android.arch.persistence.room.PrimaryKey;
 public class DeptModel {
 
     @PrimaryKey(autoGenerate = true)
-    public int mId;
+    public int id;
 
     @ColumnInfo(name = "department")
     public String mDeptName;
 
     public int getmId() {
-        return mId;
+        return id;
     }
 
-    public void setmId(int mId) {
-        this.mId = mId;
+    public void setmId(int id) {
+        this.id = id;
     }
 
     public String getmDeptName() {
@@ -28,4 +28,5 @@ public class DeptModel {
     public void setmDeptName(String mDeptName) {
         this.mDeptName = mDeptName;
     }
+
 }

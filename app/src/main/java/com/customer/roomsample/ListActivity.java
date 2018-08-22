@@ -86,33 +86,33 @@ public class ListActivity extends AppCompatActivity {
         //Saving some records
         EmployeeModel sEmployeeModel = new EmployeeModel();
         sEmployeeModel.setmName("Rohit Puri");
-        sEmployeeModel.setmDeptId("1");
         sEmployeeModel.setmSalary("18000");
+        sEmployeeModel.setmDeptId("101");
         modelArrayList.add(sEmployeeModel);
 
         EmployeeModel mStudentModel2 = new EmployeeModel();
         mStudentModel2.setmName("Tarun Joshi");
-        mStudentModel2.setmDeptId("2");
         mStudentModel2.setmSalary("22000");
+        mStudentModel2.setmDeptId("102");
         modelArrayList.add(mStudentModel2);
 
         EmployeeModel mStudentModel3 = new EmployeeModel();
         mStudentModel3.setmName("Mohit Bisht");
-        mStudentModel3.setmDeptId("3");
         mStudentModel3.setmSalary("15000");
+        mStudentModel3.setmDeptId("101");
         modelArrayList.add(mStudentModel3);
 
         EmployeeModel mStudentModel4 = new EmployeeModel();
         mStudentModel4.setmName("Arvind Kumar");
-        mStudentModel4.setmDeptId("4");
         mStudentModel4.setmSalary("7000");
+        mStudentModel4.setmDeptId("104");
         modelArrayList.add(mStudentModel4);
 
 
         final ArrayList<DeptModel> deptArrayList = new ArrayList<>();
         //Saving some records
         DeptModel sDeptModel = new DeptModel();
-        sDeptModel.setmDeptName("IT");
+        sDeptModel.setmDeptName("Sales");
         deptArrayList.add(sDeptModel);
 
         DeptModel sDeptModel2 = new DeptModel();
@@ -122,6 +122,10 @@ public class ListActivity extends AppCompatActivity {
         DeptModel sDeptModel3 = new DeptModel();
         sDeptModel3.setmDeptName("Sales");
         deptArrayList.add(sDeptModel3);
+
+        DeptModel sDeptMode4 = new DeptModel();
+        sDeptMode4.setmDeptName("Networking");
+        deptArrayList.add(sDeptMode4);
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -178,7 +182,7 @@ public class ListActivity extends AppCompatActivity {
                         break;
 
                     case 6:
-                        arrayList =   (ArrayList<EmployeeModel>) myDatabase.getEmployeeDao().getEmployeeWith2SalarywithSales();
+                        arrayList =   (ArrayList<EmployeeModel>) myDatabase.getEmployeeDao().getEmpDepartWithSales("101");
                         break;
                 }
 
